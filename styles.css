@@ -100,6 +100,7 @@ body:before{opacity:.32;background-size:58px 58px;mask-image:linear-gradient(to 
 
 /* Final hero cleanup: one calm focal visual, no legacy orbit or scan layers. */
 .hero-visual:before{display:none!important;}
+.hero:after{display:none!important;}
 .hero-orbit,.hero-scan-line,.hero-particles{display:none!important;visibility:hidden!important;}
 .hero-image-wrap{inset:-2% -2% -4% -2%;background:radial-gradient(ellipse at 60% 58%,rgba(92,225,245,.14),transparent 58%);mix-blend-mode:normal;-webkit-mask-image:none;mask-image:none;}
 .hero-image-wrap:after{inset:0;background:radial-gradient(ellipse at 62% 58%,rgba(92,225,245,.14),transparent 58%),linear-gradient(90deg,rgba(5,11,20,.42),transparent 34%,transparent 82%,rgba(5,11,20,.2));opacity:.8;}
