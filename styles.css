@@ -117,3 +117,88 @@ body:before{opacity:.32;background-size:58px 58px;mask-image:linear-gradient(to 
 @keyframes heroFloat3dTablet{0%,100%{transform:translate3d(2%,0,0) scale(.78) rotateY(-3deg)}50%{transform:translate3d(2%,-1%,0) scale(.79) rotateY(-1deg)}}
 @media(max-width:700px){.hero-image-wrap img{transform:translate3d(0,0,0) scale(.73)!important;animation:heroFloat3dMobile 8s ease-in-out infinite;}}
 @keyframes heroFloat3dMobile{0%,100%{transform:translate3d(0,0,0) scale(.73)}50%{transform:translate3d(0,-1%,0) scale(.74)}}
++
+/* Interactive garage dashboard */
+.mini-side-action{appearance:none;-webkit-appearance:none;border:0;background:transparent;text-align:left;color:var(--muted);font:inherit;font-size:11px;cursor:pointer;width:100%;transition:color .2s ease,background .2s ease,border-color .2s ease,transform .2s ease}
+.mini-side-action:hover{color:var(--cyan);transform:translateX(3px)}
+.mini-side-action.side-active{color:var(--cyan);padding:10px 11px;border:1px solid rgba(92,225,245,.25);border-radius:9px;background:rgba(92,225,245,.08)}
+.mini-side .side-bottom{margin-top:auto;padding:12px;border-top:1px solid var(--line);color:var(--ink);font-family:var(--mono);font-size:9px;border-radius:0}
+.mini-side .side-bottom:hover{color:var(--cyan);transform:none}
+.mini-button,.mini-report,.history-action{cursor:pointer;transition:transform .2s ease,color .2s ease,border-color .2s ease,background .2s ease}
+.mini-button:hover,.mini-report:hover,.history-action:hover{color:var(--cyan);border-color:rgba(92,225,245,.55);background:rgba(92,225,245,.08);transform:translateY(-2px)}
+.garage-view-head{display:flex;justify-content:space-between;gap:20px;align-items:start;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.garage-view-head h3{font-size:25px;letter-spacing:-.06em}
+.garage-view-head p{color:var(--muted);font-size:11px;line-height:1.6;max-width:360px;margin-top:8px}
+.garage-car-card{display:grid;grid-template-columns:52px 1fr auto;gap:15px;align-items:center;margin-top:25px;padding:19px;border:1px solid rgba(92,225,245,.26);border-radius:13px;background:linear-gradient(135deg,rgba(24,62,74,.72),rgba(11,27,41,.72))}
+.garage-car-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:rgba(92,225,245,.13);color:var(--cyan);font-size:23px}
+.garage-car-card strong,.garage-car-card span,.garage-car-card small{display:block}
+.garage-car-card strong{font-size:16px}
+.garage-car-card span{font:10px var(--mono);color:var(--cyan);margin-top:5px}
+.garage-car-card small{font-size:10px;color:var(--muted);margin-top:6px}
+.garage-info-strip{display:flex;align-items:center;gap:8px;margin-top:22px;padding-top:15px;border-top:1px solid var(--line);font-size:10px}
+.garage-info-strip small{margin-left:auto;color:var(--muted)}
+.garage-info-strip>b{font-size:11px}
+.garage-info-strip>span:not(.ok-dot){font:11px var(--mono);color:var(--cyan)}
+.garage-history-list{margin-top:14px}
+.garage-history-item{display:grid;grid-template-columns:13px 1fr auto;gap:12px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
+.history-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 13px rgba(92,225,245,.65)}
+.history-dot.warn{background:var(--amber);box-shadow:0 0 13px rgba(255,199,119,.65)}
+.history-dot.ok{background:var(--mint);box-shadow:0 0 13px rgba(166,239,199,.65)}
+.garage-history-item small{display:block;color:var(--cyan);font:9px var(--mono);margin-bottom:5px}
+.garage-history-item strong{display:block;font-size:12px}
+.garage-history-item p{color:var(--muted);font-size:10px;line-height:1.5;margin-top:4px}
+.history-action{width:29px;height:29px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--cyan)}
+.garage-settings{margin-top:8px}
+.setting-row,.setting-select{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.setting-row b,.setting-select b{display:block;font-size:12px}
+.setting-row small,.setting-select small{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+.setting-row input{position:absolute;opacity:0}
+.setting-row i{width:38px;height:22px;flex:0 0 auto;border-radius:99px;border:1px solid var(--line);background:#07131f;position:relative;transition:background .2s,border-color .2s}
+.setting-row i:after{content:"";position:absolute;width:16px;height:16px;left:2px;top:2px;border-radius:50%;background:var(--muted);transition:transform .2s,background .2s}
+.setting-row input:checked+i{background:rgba(92,225,245,.22);border-color:rgba(92,225,245,.5)}
+.setting-row input:checked+i:after{transform:translateX(16px);background:var(--cyan)}
+.setting-select select{border:1px solid var(--line);border-radius:8px;background:#07131f;color:var(--ink);padding:9px 10px;font:11px var(--sans)}
+.settings-save{margin-top:22px}
+.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:25px}
+.profile-grid>div{border:1px solid var(--line);border-radius:11px;padding:16px;background:rgba(22,43,58,.45)}
+.profile-grid span,.profile-grid strong,.profile-grid small{display:block}
+.profile-grid span{font:9px var(--mono);color:var(--cyan)}
+.profile-grid strong{font-size:13px;margin-top:10px}
+.profile-grid small{font-size:10px;color:var(--muted);margin-top:5px}
+.modal-layer{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px}
+.modal-layer[hidden]{display:none}
+.modal-backdrop{position:absolute;inset:0;background:rgba(2,8,14,.72);backdrop-filter:blur(12px);opacity:0;transition:opacity .18s ease}
+.modal-dialog{position:relative;width:min(620px,100%);max-height:min(86vh,760px);overflow:auto;padding:34px;border:1px solid rgba(99,232,255,.34);border-radius:24px;background:linear-gradient(145deg,#10293a,#07121e);box-shadow:0 35px 120px rgba(0,0,0,.58);transform:translateY(16px) scale(.97);opacity:0;transition:transform .22s ease,opacity .22s ease}
+.modal-layer.is-open .modal-backdrop,.modal-layer.is-open .modal-dialog{opacity:1}
+.modal-layer.is-open .modal-dialog{transform:translateY(0) scale(1)}
+.modal-close{position:absolute;right:17px;top:14px;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--muted);font-size:24px;line-height:1;cursor:pointer}
+.modal-close:hover{color:var(--cyan);border-color:rgba(92,225,245,.45)}
+.modal-kicker{display:block;color:var(--cyan);font:10px var(--mono);letter-spacing:.15em}
+.modal-dialog h2{font-size:34px;letter-spacing:-.07em;margin:14px 0 8px}
+.modal-lead{color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:24px}
+.modal-form{display:grid;gap:14px}
+.modal-form label{display:grid;gap:7px;color:var(--muted);font:10px var(--mono)}
+.modal-form input,.modal-form textarea{width:100%;border:1px solid var(--line);border-radius:10px;background:rgba(4,13,22,.72);color:var(--ink);padding:12px 13px;font:14px var(--sans);outline:none;resize:vertical}
+.modal-form input:focus,.modal-form textarea:focus{border-color:rgba(92,225,245,.65);box-shadow:0 0 0 3px rgba(92,225,245,.1)}
+.modal-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.modal-actions .button{cursor:pointer}
+.report-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 25px}
+.report-summary>div{padding:15px;border:1px solid var(--line);border-radius:11px;background:rgba(22,43,58,.5)}
+.report-summary span{display:block;color:var(--muted);font:9px var(--mono)}
+.report-summary strong{display:block;font-size:14px;margin-top:9px}
+.report-ok{color:var(--mint)}
+.report-block{padding-top:20px;border-top:1px solid var(--line)}
+.report-block+.report-block{margin-top:23px}
+.report-row{padding:12px 0;border-bottom:1px solid var(--line)}
+.report-row:last-child{border-bottom:0}
+.report-row span{display:block;color:var(--cyan);font:9px var(--mono)}
+.report-row b{display:block;font-size:12px;margin-top:5px}
+.report-row small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+.report-note{padding:16px;border-radius:12px;background:rgba(92,225,245,.08);border:1px solid rgba(92,225,245,.18)}
+.report-note p{color:var(--muted);font-size:12px;line-height:1.65;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:28px;z-index:120;transform:translate(-50%,18px);padding:12px 17px;border:1px solid rgba(166,239,199,.4);border-radius:999px;background:rgba(8,25,35,.92);color:var(--mint);font:11px var(--mono);box-shadow:0 15px 45px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.toast.is-visible{opacity:1;transform:translate(-50%,0)}
+body.modal-open{overflow:hidden}
+@media(max-width:700px){.garage-view-head{display:block}.garage-view-head .mini-button{margin-top:18px}.garage-car-card{grid-template-columns:42px 1fr}.garage-car-card .mini-report{grid-column:2;justify-self:start}.profile-grid,.report-summary{grid-template-columns:1fr}.modal-dialog{padding:28px 20px}.modal-form-grid{grid-template-columns:1fr}.modal-actions .button{flex:1;justify-content:center}.garage-info-strip{flex-wrap:wrap}.garage-info-strip small{width:100%;margin-left:0}.mini-side-action{width:auto}}
+
