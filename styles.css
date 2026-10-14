@@ -38,6 +38,21 @@ body{letter-spacing:-.01em}
 @media(max-width:700px){.hero:after{width:300px;height:300px;right:-26%;top:21%}.hero-orbit{opacity:.75}.orbit-one{width:320px;height:145px;right:-14%;top:9%}.orbit-two{width:260px;height:110px;right:-10%;top:17%}.nav a.active:after{display:none}}
 @media(prefers-reduced-motion:reduce){.hero:after,.hero-particles span,.hero-orbit,.hero-image-wrap img,.metric-card:before,.swot-card:before,.mvp-card:before,.arch-node:after,.timeline-item>span{animation:none}.button:after{display:none}}
 
+/* Hero calm premium pass: a clean product stage with one controlled focal point. */
+.hero{grid-template-columns:minmax(0,46%) minmax(0,54%);}
+.hero-copy{max-width:650px;padding-right:2vw;}
+.hero-visual{min-height:590px;margin-left:0;isolation:isolate;}
+.hero-visual:before{display:none;}
+.hero-image-wrap{inset:0;display:grid;place-items:center;overflow:visible;background:radial-gradient(circle at 58% 52%,rgba(92,225,245,.13),transparent 42%),radial-gradient(circle at 72% 55%,rgba(185,169,255,.1),transparent 60%);mix-blend-mode:normal;-webkit-mask-image:none;mask-image:none;}
+.hero-image-wrap:after{content:"";position:absolute;left:16%;top:18%;width:68%;height:62%;border-radius:50%;background:radial-gradient(circle,rgba(92,225,245,.14),transparent 68%);filter:blur(24px);opacity:1;pointer-events:none;}
+.hero-image-wrap img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;opacity:1;filter:drop-shadow(0 26px 42px rgba(0,0,0,.38));mix-blend-mode:normal;transform:translate3d(3%,0,0) scale(.86);animation:none!important;}
+.hero-orbit,.hero-scan-line,.hero-particles{display:none!important;}
+.hero-floating-card{z-index:3;animation:none;backdrop-filter:blur(18px);background:rgba(9,22,34,.8);border-color:rgba(92,225,245,.25);box-shadow:0 14px 38px rgba(0,0,0,.28);}
+.float-card-a{left:1%;top:19%;}.float-card-b{right:1%;bottom:22%;}
+.hero-caption{right:8%;top:4%;opacity:.78;}
+@media(max-width:980px){.hero{grid-template-columns:1fr;}.hero-copy{max-width:700px;padding-right:0;}.hero-visual{min-height:500px;margin:20px 0 -12px;}.hero-image-wrap img{transform:scale(.9);}.float-card-a{left:2%;}.float-card-b{right:3%;}}
+@media(max-width:700px){.hero-visual{min-height:390px;margin:12px -8% -8px;}.hero-image-wrap{inset:0;}.hero-image-wrap img{transform:scale(.88);}.hero-floating-card{animation:none;}.float-card-a{left:3%;top:9%;}.float-card-b{right:3%;bottom:9%;}}
+
 /* Premium visual pass v3 — stronger contrast, clearer hero, OBD-II connection story */
 :root{--bg:#050b14;--bg-soft:#0b1726;--ink:#f7fbff;--muted:#b4c7d3;--line:rgba(160,211,228,.22);--cyan:#63e8ff;--mint:#a9f5c9;--violet:#ad9cff;--amber:#ffd080}
 body{background:radial-gradient(circle at 76% 8%,rgba(66,194,230,.13),transparent 24%),radial-gradient(circle at 12% 48%,rgba(121,94,255,.08),transparent 22%),var(--bg)}
