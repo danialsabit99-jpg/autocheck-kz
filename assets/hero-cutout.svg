@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
+  <defs>
+    <linearGradient id="body" x1="198" y1="233" x2="1000" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#253B4B"/>
+      <stop offset=".48" stop-color="#0D1D2A"/>
+      <stop offset="1" stop-color="#10132A"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="205" y1="250" x2="1010" y2="490" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5CE1F5"/>
+      <stop offset=".58" stop-color="#B9A9FF"/>
+      <stop offset="1" stop-color="#5CE1F5"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="390" y1="170" x2="890" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172C3A"/>
+      <stop offset=".55" stop-color="#0B1725"/>
+      <stop offset="1" stop-color="#302751"/>
+    </linearGradient>
+    <radialGradient id="sensor" cx="0" cy="0" r="1" gradientTransform="translate(390 435) rotate(90) scale(75)">
+      <stop stop-color="#5CE1F5" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#5CE1F5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="600" cy="584" rx="470" ry="30" fill="#5CE1F5" fill-opacity=".11"/>
+  <path d="M115 478c20-52 70-83 139-97l126-25 104-119c24-28 61-45 103-45h206c56 0 104 23 138 65l62 77c61 14 100 44 113 90l15 55c5 18-8 35-27 35h-36c-9-74-70-123-143-123-72 0-128 49-138 123H467c-10-74-67-123-140-123-70 0-130 45-143 113h-45c-23 0-33-18-24-36Z" fill="url(#body)" stroke="url(#edge)" stroke-width="4"/>
+  <path d="m391 337 107-111c17-18 43-29 72-29h194c38 0 72 14 96 42l65 76-534 22Z" fill="url(#glass)" stroke="#83E9FA" stroke-opacity=".68" stroke-width="3"/>
+  <path d="M591 201v135M789 201l28 116" stroke="#5CE1F5" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M171 448h260M482 448h196M847 448h207" stroke="#5CE1F5" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M143 420c83-12 158-15 235-13M867 407c92 2 156 12 214 33" stroke="#B9A9FF" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M193 395h105l-25 46H165l28-46ZM893 398h113l33 42H910l-17-42Z" fill="#07131E" stroke="#5CE1F5" stroke-opacity=".5" stroke-width="3"/>
+  <circle cx="327" cy="500" r="82" fill="#08131F" stroke="#B9A9FF" stroke-width="4"/>
+  <circle cx="327" cy="500" r="50" fill="#182A38" stroke="#5CE1F5" stroke-opacity=".7" stroke-width="3"/>
+  <circle cx="327" cy="500" r="15" fill="#5CE1F5"/>
+  <path d="m327 450 0 100M277 500h100M292 465l70 70M362 465l-70 70" stroke="#C9F6FF" stroke-opacity=".7" stroke-width="4"/>
+  <circle cx="883" cy="500" r="82" fill="#08131F" stroke="#B9A9FF" stroke-width="4"/>
+  <circle cx="883" cy="500" r="50" fill="#182A38" stroke="#5CE1F5" stroke-opacity=".7" stroke-width="3"/>
+  <circle cx="883" cy="500" r="15" fill="#5CE1F5"/>
+  <path d="m883 450 0 100M833 500h100M848 465l70 70M918 465l-70 70" stroke="#C9F6FF" stroke-opacity=".7" stroke-width="4"/>
+  <ellipse cx="385" cy="433" rx="90" ry="78" fill="url(#sensor)"/>
+  <rect x="351" y="407" width="68" height="46" rx="12" fill="#07131E" stroke="#5CE1F5" stroke-width="3" filter="url(#glow)"/>
+  <path d="M365 423h40M365 434h40" stroke="#C9F6FF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1000" cy="363" r="7" fill="#B9A9FF" filter="url(#glow)"/>
+  <path d="M1029 407c36 7 60 20 78 39" stroke="#B9A9FF" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+</svg>
